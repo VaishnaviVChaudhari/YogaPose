@@ -1,0 +1,102 @@
+body{
+    background-image: url("https://static.sadhguru.org/d/46272/1633169140-1633169139683.jpg");
+}
+.container{
+    width: 500px;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 5px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap:wrap;
+    align-items: center;
+    background-color: rgba(28, 49, 41, 0.767);
+    margin-top: 20px;
+}
+.logo{
+    width: 150px;
+    height: 50px;
+    flex-grow: 7;
+}
+.main{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    text-shadow: 2px 3px 5px black;
+    letter-spacing: 2px;
+}
+.sub{
+    color: white;
+    font-weight: bold;
+    margin-top: -20px;
+    font-size: 10px;
+    margin-left: 8px;
+    letter-spacing: 3px;
+}
+ul{
+    display: flex;
+  flex-wrap:wrap;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px !important;
+    width: 500px;
+    height: 50px;
+}
+li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px !important;
+}
+.subsec{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.heading{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 6px;
+    font-style: italic;
+    text-shadow: 2px 4px 6px black;
+}
+.subheading{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+    font-size: 25px;
+    margin-top: -20px;
+}
+.butt{
+    width: 250px;
+    height: 50px;
+    background-color: transparent;
+    border:2px solid rgb(141, 141, 148);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.butt:hover{
+    background-color:rgba(28, 49, 41, 0.767); ;
+}

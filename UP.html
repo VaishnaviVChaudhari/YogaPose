@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Image Classifier using ML5 js</title>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+
+        var loadFile = function (event) {
+        var image = document.getElementById("image");
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+  
+  //maxPredictions = model.getTotalClasses();
+ 
+    const classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/vlMmr_Be3-/model.json',modelLoaded);
+
+    // When the model is loaded
+    function modelLoaded() {
+    console.log("Model Loaded!");
+    }
+            
+    function predict() {
+    classifier.predict(document.getElementById("image"),
+            function (err, results) {
+                    alert('Its '+results[0].label);
+                });
+            }
+
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1 style="color: green;">Document Classification</h1>
+            <b>
+                Student Identy Proof Classification 
+            </b>
+            </br>
+            <img src="" alt="" id="image"
+                width="380px" height="280px" />
+            </br></br>
+            <input type="file" accept="image/*"
+                onchange="loadFile(event)"
+                name="image" id="file" />
+            <button onclick="predict()">predict</button>
+           
+        <input type="submit" onclick="alert('Your Form Successfully Submited')" value="Submit">
+        
+        <a href="/form.html"> <button type="button">Previous</button></a>
+
+    </center>
+    </body>
+</html>
